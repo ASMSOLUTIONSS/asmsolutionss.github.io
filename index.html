@@ -1,77 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ASMSOLUTIONSS - IT Consulting & Staffing</title>
-<style>
-  .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    background-color: #25d366;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px;
-  }
+  <meta charset="UTF-8">
+  <title>ASM Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  .whatsapp-float img {
-    width: 100%;
-    height: auto;
-  }
-</style>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
 
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    .full-bg {
+      background: url('background.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .full-bg::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .centered-content {
+      z-index: 2;
+      position: relative;
+    }
+
+    .centered-content h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .centered-content p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+      font-size: 14px;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+    }
+
+    .whatsapp-float img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .centered-content h1 {
+        font-size: 2em;
+      }
+
+      .centered-content p {
+        font-size: 1em;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>ASMSOLUTIONSS</h1>
+  <!-- Navigation -->
   <nav>
-    <a href="#home">Home</a> | 
-    <a href="#about">About Us</a> | 
-    <a href="#services">Services</a> | 
-    <a href="#contact">Contact Us</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </nav>
-</header>
 
-<section id="home">
-  <h2>Welcome to ASMSOLUTIONSS</h2>
-  <p>Your trusted partner for IT consulting and staffing solutions. We help businesses find the right talent and technology solutions to grow and succeed.</p>
-</section>
+  <!-- Hero / Full Background Section -->
+  <div class="full-bg" id="home">
+    <div class="centered-content">
+      <h1>ASM SOLUTIONS</h1>
+      <p>Your trusted partner in digital transformation</p>
+    </div>
+  </div>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>ASMSOLUTIONSS specializes in delivering high-quality IT consulting and staffing services to clients across industries. Our mission is to provide customized staffing solutions tailored to your business needs.</p>
-</section>
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>IT Staffing & Recruitment</li>
+      <li>Consulting & Project Management</li>
+      <li>Technology Solutions & Support</li>
+    </ul>
+  </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li>IT Staffing & Recruitment</li>
-    <li>Consulting & Project Management</li>
-    <li>Technology Solutions & Support</li>
-  </ul>
-</section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Reach out for any questions or business inquiries.</p>
+    <p>Email: <a href="mailto:hr@asmsolutionss.com">hr@asmsolutionss.com</a></p>
+  </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>We would love to hear from you! Reach out to us for any inquiries or partnership opportunities.</p>
-  <p class="contact-info">Email: <a href="mailto:hr@asmsolutionss.com">hr@asmsolutionss.com</a></p>
-</section>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 ASM Solutions. All rights reserved.
+  </footer>
 
-<footer>
-  &copy; 2025 ASMSOLUTIONSS. All rights reserved.
-</footer>
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/16093253079" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Chat with us on WhatsApp" />
-</a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/16093253079" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Chat with us on WhatsApp" />
+  </a>
 
 </body>
 </html>
